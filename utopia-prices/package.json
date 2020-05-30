@@ -1,0 +1,16 @@
+{
+  "name": "utopia-prices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass utopia/assets/scss -o utopia/assets/css",
+    "watch-css": "npm run build-css && node-sass --watch utopia/assets/scss -o utopia/assets/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
