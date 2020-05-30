@@ -40,7 +40,7 @@ docker-compose up -d
 
 #### Volumes
 
-* `/utopia` - Plugin files location
+* `/utopia-prices` - Plugin files location
 
 
 ## Authors

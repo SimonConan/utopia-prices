@@ -1,0 +1,36 @@
+#utopia-prices {
+
+    @media all and (max-width: 430px) {
+
+        .flex-table {
+            .flex-row {
+                border-bottom: 0;
+            }
+
+        }
+
+        .header {
+            .flex-row {
+                border-bottom: solid 1px;
+            }
+        }
+
+        .flex-row {
+            width: 100%; //1px = border right
+
+            &.first {
+                width: 100%;
+            }
+        }
+
+        .column {
+            width: 100%;
+
+        }
+
+        .flex-cell {
+            width: 100%; //1px = border right
+        }
+    }
+
+}

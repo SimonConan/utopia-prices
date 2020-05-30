@@ -1,2 +1,106 @@
-.simco {
-  background-color: green; }
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+#utopia-prices { }
+
+#utopia-prices div {
+  box-sizing: border-box; }
+  #utopia-prices div p {
+    text-align: left;
+    margin-bottom: 6px; }
+  #utopia-prices div h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; }
+
+#utopia-prices.table-container {
+  display: block;
+  width: 90%; }
+
+#utopia-prices .flex-table {
+  display: flex;
+  flex-flow: row wrap;
+  transition: 0.5s;
+  height: 200px; }
+  #utopia-prices .flex-table:hover {
+    transition: 500ms; }
+
+#utopia-prices .flex-row {
+  height: 200px;
+  background-color: #E3D6CE;
+  color: #7a7a7a;
+  font-family: "Encode Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.5em 0.5em; }
+  #utopia-prices .flex-row.img {
+    width: 28%;
+    background-color: unset; }
+    #utopia-prices .flex-row.img img {
+      max-height: 200px; }
+  #utopia-prices .flex-row.title {
+    width: 18%;
+    text-align: center;
+    color: #000000;
+    font-family: "Permanent Marker", Sans-serif;
+    font-size: 23px;
+    background-image: url("../images/Utopia-lin.jpg"); }
+  #utopia-prices .flex-row.col1 {
+    width: 15%; }
+  #utopia-prices .flex-row.col2 {
+    width: 10%; }
+  #utopia-prices .flex-row.col3 {
+    width: 7%;
+    color: #590B46;
+    font-weight: 900; }
+  #utopia-prices .flex-row.col4 {
+    width: 22%; }
+
+#utopia-prices .rowspan {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center; }
+
+#utopia-prices .column {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0;
+  height: 200px;
+  justify-content: center; }
+  #utopia-prices .column .flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0;
+    border: 0; }
+    #utopia-prices .column .flex-row:hover {
+      background: #F5F5F5;
+      transition: 500ms; }
+
+#utopia-prices .flex-cell {
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 0.5em 0.5em; }
+
+@media all and (max-width: 430px) {
+  #utopia-prices .flex-table .flex-row {
+    border-bottom: 0; }
+  #utopia-prices .header .flex-row {
+    border-bottom: solid 1px; }
+  #utopia-prices .flex-row {
+    width: 100%; }
+    #utopia-prices .flex-row.first {
+      width: 100%; }
+  #utopia-prices .column {
+    width: 100%; }
+  #utopia-prices .flex-cell {
+    width: 100%; } }
+
+@media all and (max-width: 767px) {
+  #utopia-prices .flex-row {
+    width: calc(100% / 3); }
+    #utopia-prices .flex-row.first {
+      width: 100%; }
+  #utopia-prices .column {
+    width: 100%; } }
