@@ -1,36 +1,87 @@
 #utopia-prices {
 
-    @media all and (max-width: 430px) {
+    @media all and (max-width: 575.98px) {
+
+
+    }
+
+    // Small devices (landscape phones, less than 768px)
+    @media all and (max-width: 767.98px) {
 
         .flex-table {
-            .flex-row {
-                border-bottom: 0;
-            }
-
-        }
-
-        .header {
-            .flex-row {
-                border-bottom: solid 1px;
-            }
-        }
-
-        .flex-row {
-            width: 100%; //1px = border right
-
-            &.first {
-                width: 100%;
-            }
-        }
-
-        .column {
+            flex-flow: column;
             width: 100%;
 
-        }
+            .flex-row {
 
-        .flex-cell {
-            width: 100%; //1px = border right
+                p {
+                    text-align: center;
+                    margin-bottom: initial;
+                }
+
+                &.img {
+                    height: 200px;
+                }
+
+                .column {
+                    height: 100%;
+                }
+
+                width: 100%;
+                height: 125px;
+            }
+
+            &.laser-game {
+
+                .flex-row {
+
+                    &.img {
+                        height: $height;
+                    }
+
+                    height: 100px;
+                }
+            }
+
+            &.quick-flight-duo {
+
+                .flex-row {
+
+                    &.img {
+                        height: $height;
+                        max-height: $height;
+
+                        img {
+                            max-height: $height;
+                        }
+                    }
+
+                    height: 100px;
+                }
+
+                .column.no-img {
+                    width: 100%;
+
+                    .flex-row {
+                        flex-flow: column;
+                        height: auto;
+
+                        .flex-cell {
+                            height: 100px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &.sentier-pedagogique {
+
+                .flex-row {
+                    width: 100%;
+                }
+            }
         }
+    
     }
 
 }
