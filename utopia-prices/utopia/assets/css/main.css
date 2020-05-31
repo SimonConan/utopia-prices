@@ -1,60 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 #utopia-prices { }
-
-#utopia-prices div {
-  box-sizing: border-box; }
-  #utopia-prices div p {
-    text-align: left;
-    margin-bottom: 6px; }
-  #utopia-prices div h2 {
+  #utopia-prices .flex-row.quick-flight, #utopia-prices .flex-row.formule-duo[role=rowgroup] {
+    padding: 0; }
+  #utopia-prices .flex-row.img {
+    width: 28%; }
+  #utopia-prices .flex-row.title {
+    width: 18%; }
+  #utopia-prices .flex-row.col1 {
+    width: 15%; }
+  #utopia-prices .flex-row.col2 {
+    width: 10%; }
+  #utopia-prices .flex-row.col3 {
+    width: 7%; }
+  #utopia-prices .flex-row.col4 {
+    width: 22%; }
+  #utopia-prices .flex-cell[role=cell]:first-child {
+    padding: 0; }
+  #utopia-prices .flex-cell.title {
+    width: 25%; }
+  #utopia-prices .flex-cell.col1 {
+    width: 11%; }
+  #utopia-prices .flex-cell.col2 {
+    width: 24%; }
+  #utopia-prices .flex-cell.col3 {
+    width: 10%; }
+  #utopia-prices .flex-cell.col4 {
+    width: 30%; }
+  #utopia-prices .formule-duo .flex-cell.col1 {
+    width: 35%; }
+  #utopia-prices .sentier-pedagogique .flex-row.col1 {
+    width: 25%; }
+  #utopia-prices .laser-game p:first-child, #utopia-prices .quick-flight p:first-child {
+    margin-bottom: 22px; }
+  #utopia-prices .quick-flight-duo .col4 p {
+    margin-bottom: 0; }
+  #utopia-prices .quick-flight-duo .column.no-img {
+    width: 72%;
+    height: fit-content; }
+  #utopia-prices .quick-flight-duo .img {
+    height: inherit;
+    margin: 0;
+    max-height: -webkit-fill-available; }
+    #utopia-prices .quick-flight-duo .img img {
+      max-height: fit-content; }
+  #utopia-prices .quick-flight-duo .flex-row {
+    display: flex; }
+    #utopia-prices .quick-flight-duo .flex-row.quick-flight {
+      margin-bottom: 30px; }
+  #utopia-prices .quick-flight-duo .formule-duo {
+    height: 100px; }
+    #utopia-prices .quick-flight-duo .formule-duo .flex-cell, #utopia-prices .quick-flight-duo .formule-duo .column {
+      height: 100px; }
+  #utopia-prices .laser-game .img {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 0; }
+    justify-content: center;
+    flex-direction: column; }
+    #utopia-prices .laser-game .img img {
+      max-height: 300px; }
+
+#utopia-prices div p {
+  text-align: left;
+  margin-bottom: 6px; }
+  #utopia-prices div p:last-child {
+    margin-bottom: 0; }
+
+#utopia-prices div h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; }
+
+#utopia-prices div img {
+  max-height: 200px; }
 
 #utopia-prices.table-container {
-  display: block;
   width: 90%; }
 
 #utopia-prices .flex-table {
   display: flex;
   flex-flow: row wrap;
-  transition: 0.5s;
-  height: 200px; }
-  #utopia-prices .flex-table:hover {
-    transition: 500ms; }
+  margin-bottom: 30px; }
 
-#utopia-prices .flex-row {
+#utopia-prices .flex-row, #utopia-prices .flex-cell {
   height: 200px;
   background-color: #E3D6CE;
   color: #7a7a7a;
   font-family: "Encode Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  padding: 0.5em 0.5em; }
-  #utopia-prices .flex-row.img {
-    width: 28%;
+  padding: 0 0.5em; }
+  #utopia-prices .flex-row.img, #utopia-prices .flex-cell.img {
     background-color: unset; }
-    #utopia-prices .flex-row.img img {
-      max-height: 200px; }
-  #utopia-prices .flex-row.title {
-    width: 18%;
+  #utopia-prices .flex-row.title, #utopia-prices .flex-cell.title {
     text-align: center;
     color: #000000;
     font-family: "Permanent Marker", Sans-serif;
     font-size: 23px;
     background-image: url("../images/Utopia-lin.jpg"); }
-  #utopia-prices .flex-row.col1 {
-    width: 15%; }
-  #utopia-prices .flex-row.col2 {
-    width: 10%; }
-  #utopia-prices .flex-row.col3 {
-    width: 7%;
+  #utopia-prices .flex-row.col1 p, #utopia-prices .flex-cell.col1 p {
+    margin-left: 5px; }
+  #utopia-prices .flex-row.col3, #utopia-prices .flex-cell.col3 {
     color: #590B46;
     font-weight: 900; }
-  #utopia-prices .flex-row.col4 {
-    width: 22%; }
 
 #utopia-prices .rowspan {
   display: flex;
@@ -65,42 +114,41 @@
 #utopia-prices .column {
   display: flex;
   flex-flow: column wrap;
-  padding: 0;
   height: 200px;
   justify-content: center; }
-  #utopia-prices .column .flex-row {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    padding: 0;
-    border: 0; }
-    #utopia-prices .column .flex-row:hover {
-      background: #F5F5F5;
-      transition: 500ms; }
 
-#utopia-prices .flex-cell {
-  width: calc(100% / 3);
-  text-align: center;
-  padding: 0.5em 0.5em; }
-
-@media all and (max-width: 430px) {
-  #utopia-prices .flex-table .flex-row {
-    border-bottom: 0; }
-  #utopia-prices .header .flex-row {
-    border-bottom: solid 1px; }
-  #utopia-prices .flex-row {
+@media all and (max-width: 767.98px) {
+  #utopia-prices .flex-table {
+    flex-flow: column;
     width: 100%; }
-    #utopia-prices .flex-row.first {
+    #utopia-prices .flex-table .flex-row {
+      width: 100%;
+      height: 125px; }
+      #utopia-prices .flex-table .flex-row p {
+        text-align: center;
+        margin-bottom: initial; }
+      #utopia-prices .flex-table .flex-row.img {
+        height: 200px; }
+      #utopia-prices .flex-table .flex-row .column {
+        height: 100%; }
+    #utopia-prices .flex-table.laser-game .flex-row {
+      height: 100px; }
+      #utopia-prices .flex-table.laser-game .flex-row.img {
+        height: 200px; }
+    #utopia-prices .flex-table.quick-flight-duo .flex-row {
+      height: 100px; }
+      #utopia-prices .flex-table.quick-flight-duo .flex-row.img {
+        height: 200px;
+        max-height: 200px; }
+        #utopia-prices .flex-table.quick-flight-duo .flex-row.img img {
+          max-height: 200px; }
+    #utopia-prices .flex-table.quick-flight-duo .column.no-img {
       width: 100%; }
-  #utopia-prices .column {
-    width: 100%; }
-  #utopia-prices .flex-cell {
-    width: 100%; } }
-
-@media all and (max-width: 767px) {
-  #utopia-prices .flex-row {
-    width: calc(100% / 3); }
-    #utopia-prices .flex-row.first {
-      width: 100%; }
-  #utopia-prices .column {
-    width: 100%; } }
+      #utopia-prices .flex-table.quick-flight-duo .column.no-img .flex-row {
+        flex-flow: column;
+        height: auto; }
+        #utopia-prices .flex-table.quick-flight-duo .column.no-img .flex-row .flex-cell {
+          height: 100px;
+          width: 100%; }
+    #utopia-prices .flex-table.sentier-pedagogique .flex-row {
+      width: 100%; } }

@@ -2,4 +2,103 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    // Column width
+    .flex-row {
+        &.quick-flight,&.formule-duo[role=rowgroup] {
+            padding: 0;
+        }
+        &.img   { width: 28%; }
+        &.title { width: 18%; }
+        &.col1  { width: 15%; }
+        &.col2  { width: 10%; }
+        &.col3  { width: 7%;  }
+        &.col4  { width: 22%; }
+    }
+
+    .flex-cell {
+        &[role=cell]:first-child {
+            padding: 0;
+        }
+        &.title { width: 25%; }
+        &.col1  { width: 11%;  }
+        &.col2  { width: 24%; }
+        &.col3  { width: 10%; }
+        &.col4  { width: 30%; }
+    }
+
+    .formule-duo {
+        .flex-cell {
+            &.col1  { width: 35%; }
+        }
+    }
+
+    .sentier-pedagogique {
+        .flex-row {
+            &.col1  { width: 25%; }
+        }
+    }
+
+    // Specific styles
+    .laser-game,.quick-flight {
+
+        p:first-child {
+            margin-bottom: 22px;
+        }
+    }
+
+    .quick-flight-duo {
+
+        .col4 {
+            p {     
+                margin-bottom: 0;
+            }
+        }
+
+        .column.no-img {
+            width: 72%;
+            height: fit-content;
+        }
+
+        .img {
+            height: inherit;
+            margin: 0;
+            max-height: -webkit-fill-available;
+
+            img {
+                max-height: fit-content;
+            }
+        }
+
+        .flex-row {
+            display: flex;
+
+            &.quick-flight {
+                margin-bottom: 30px;
+            }
+        }
+
+        .formule-duo {
+            height: $height-fomule-duo;
+
+            .flex-cell,.column {
+                height: $height-fomule-duo;
+            }
+        }
+
+    }
+
+    .laser-game {
+        .img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            img {
+                max-height: $height-img-formule-duo;
+            }
+        }
+    }
+
 }

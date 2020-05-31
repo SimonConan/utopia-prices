@@ -1,11 +1,14 @@
 #utopia-prices {
 
     div {
-        box-sizing: border-box;
         
         p {   
             text-align: left;
             margin-bottom: 6px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         h2 {
@@ -14,69 +17,55 @@
             align-items: center;
             margin: 0;
         }
+
+        img {
+            max-height: $height;
+        }
     }
     
     &.table-container {
-        display: block;
         width: 90%;
     }
     
     .flex-table {
         display: flex;
         flex-flow: row wrap;
-        transition: 0.5s;
-        height: $height;
-       
-        &:hover {
-            transition: 500ms; 
-        }
+        margin-bottom: 30px;
     }
     
-    .flex-row {
+    .flex-row,.flex-cell {
+
         &.img {
-            width: 28%;
             background-color: unset;
-
-            img {
-                max-height: 200px;
-            }
         }
-
+    
         &.title {
-            width: 18%;
             text-align: center;
             color: $title-color;
             font-family: $title-font-family;
             font-size: $title-font-size;
             background-image: $title-img;
         }
-
+    
         &.col1 {
-            width: 15%;
-
+    
+            p {
+                margin-left: 5px;
+            }
         }
-
-        &.col2 {
-            width: 10%;
-        }
-
+        
         &.col3 {
-            width: 7%;
             color: $price-color;
             font-weight: $price-font-weight;
         }
 
-        &.col4 {
-            width: 22%;
-        }
-
-        height: 200px;
+        height: $height;
         background-color: $table-background;
         color: $text-color;
         font-family: $text-font-family;
         font-size: $text-font-size;
         font-weight: $text-font-weight;
-        padding: 0.5em 0.5em;
+        padding: 0 0.5em;
     }
     
     .rowspan {
@@ -89,33 +78,8 @@
     .column {
         display: flex;
         flex-flow: column wrap;
-        padding: 0;
         height: $height;
         justify-content: center;
     
-        .flex-row {
-            display: flex;
-            flex-flow: row wrap;
-            width: 100%;
-            padding: 0;
-            border: 0;
-    
-            &:hover {
-                background: #F5F5F5;
-                transition: 500ms;
-            }
-        }
     }
-    
-    .flex-cell {
-        width: calc(100% / 3); //1px = border right
-        text-align: center;
-        padding: 0.5em 0.5em;
-    
-        //flex: 1 1 33.3%;
-        &:last-child {
-            // border-right: 0;
-        }
-    }
-
 }
