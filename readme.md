@@ -38,6 +38,13 @@ Silently start container
 docker-compose up -d
 ```
 
+Watch scss files during development
+
+```shell
+docker exec -it wp-utopia bash
+cd ./wp-content/plugins/utopia-prices/ && npm run watch-css
+```
+
 #### Volumes
 
 * `/utopia-prices` - Plugin files location
