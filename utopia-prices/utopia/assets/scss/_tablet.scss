@@ -1,16 +1,91 @@
 #utopia-prices {
 
-    @media all and (max-width: 767px) {
+    // Medium devices (tablets, less than 992px)
+    @media all and (min-width: 767.99px) and (max-width: 991.98px) {
+
         .flex-row {
-            width: calc(100% / 3); //1px = border right
-    
-            &.first {
+
+            &.img {
+                flex: 0 1 100%;
+            }
+
+            &.title {
+                flex: 0 1 100%;
+                height: 70px;
+            }
+
+            &.col1  { width: 30%; }
+            &.col2  { width: 20%; }
+            &.col3  { width: 10%; }
+            &.col4  { width: 40%; }
+        }
+
+        .quick-flight-duo {
+
+            .flex-row {
+
+                &.img {
+                    height: $height;
+                    max-height: $height;
+
+                    img {
+                        max-height: $height;
+                    }
+                }
+
+                height: 100px;
+            }
+
+            .column.no-img {
                 width: 100%;
+
+                .flex-row {
+                    flex-flow: column;
+                    height: auto;
+
+                    &[role=rowgroup] {
+                        display: flex;
+                        flex-flow: row wrap;
+                    }
+
+                    .flex-cell {
+                        height: 200px;
+
+                        &.title {
+                            height: 70px;
+                            flex: 0 1 100%;
+                        }
+
+                        &.col1 { width: 20% }
+                        &.col2 { width: 30% }
+                        &.col3 { width: 10% }
+                        &.col4 { width: 40% }
+                    }
+                }
+
+                .formule-duo {
+                    .flex-cell {
+                        &.col1 { width: 50% }
+                        &.col3 { width: 10% }
+                        &.col4 { width: 40% }
+                    
+                        height: inherit;
+                    }
+                }
             }
         }
-    
-        .column {
-            width: 100%;
+
+        .sentier-pedagogique {
+            .flex-row {
+                &.col1 { width: 50% }
+                &.col3 { width: 10% }
+                &.col4 { 
+                    width: 40%;
+                    .column {
+                        margin-left: 5%;
+                    }
+                }
+            }
         }
     }
 
