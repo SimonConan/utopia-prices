@@ -45,6 +45,11 @@ docker exec -it wp-utopia bash
 cd ./wp-content/plugins/utopia-prices/ && npm run watch-css
 ```
 
+#### Tests
+
+* Add the shortcode in one of your pages `UTOPIA_Prices`
+* Go to 127.0.0.1:8080/your_page
+
 #### Volumes
 
 * `/utopia-prices` - Plugin files location
