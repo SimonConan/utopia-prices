@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "./node_modules/.bin/node-sass utopia/assets/scss -o utopia/assets/css",
-    "watch-css": "npm run build-css && ./node_modules/.bin/node-sass   --watch utopia/assets/scss -o utopia/assets/css"
+    "build-css": "./node_modules/.bin/node-sass utopia/assets/scss -o utopia/assets/css --output-style compressed",
+    "watch-css": "npm run build-css && ./node_modules/.bin/node-sass --watch utopia/assets/scss -o utopia/assets/css --output-style compressed"
   },
   "author": "",
   "license": "ISC",
