@@ -5,7 +5,7 @@
 /*
 Plugin Name: Utopia prices
 Plugin URI: https://agence-lilot.com/
-Description: Plugin to display utopia specifics blocks (prices table : "UTOPIA_prices")
+Description: Plugin to display utopia specifics blocks (prices table : "UTOPIA_Prices")
 Version: 0.0.1
 Author: Simon Conan
 Author URI: https://www.linkedin.com/in/simonconan/
