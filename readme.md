@@ -2,6 +2,7 @@
 # UTOPIA-PRICES
 
 Wordpress plugin to display utopia specifics blocks
+[Check in prodution here](https://utopia-parc.fr/nos-tarifs/particuliers/)
 
 ## Getting Started
 
